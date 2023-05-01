@@ -25,7 +25,7 @@ interface ZodError {
   message: string;
 }
 
-export function formatErrors(errors: ZodError[]): NestedErrors {
+export function formatErrors(errors: any) {
   const fieldErrors: FieldErrors = {};
   for (const error of errors) {
     const field = error.path[0];
